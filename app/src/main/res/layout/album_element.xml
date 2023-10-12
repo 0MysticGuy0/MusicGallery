@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/albumRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    android:background="@drawable/bck02"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/albumYear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2000г."
+        android:textColor="#E6E6E6"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/albumAuthor"
+        app:layout_constraintTop_toBottomOf="@+id/albumName" />
+
+    <TextView
+        android:id="@+id/albumSongsNum"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="10 композиций"
+        android:gravity="bottom|end"
+        android:textColor="#F3F3F3"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toTopOf="@+id/albumListens"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/albumIcoCardView"
+        />
+
+    <TextView
+        android:id="@+id/albumListens"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="10000 прослушиваний"
+        android:gravity="end"
+        android:textColor="#EAE9E9"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/albumIcoCardView" />
+
+    <TextView
+        android:id="@+id/albumAuthor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="Автор"
+        android:textColor="#FFFFFF"
+
+        android:textSize="12sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toStartOf="@id/albumYear"
+        app:layout_constraintStart_toEndOf="@+id/albumIcoCardView"
+        app:layout_constraintTop_toBottomOf="@+id/albumName" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/albumIcoCardView"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        app:cardCornerRadius="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/albumIco"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/via" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/albumName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="Альбом"
+        android:textColor="#FFFFFF"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/albumIcoCardView"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
